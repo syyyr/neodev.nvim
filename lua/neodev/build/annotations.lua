@@ -210,7 +210,11 @@ function M.fun(fun)
   local params = {}
 
   for _, param in pairs(fun.params) do
-    ret = ret .. M.param(param)
+    if param.name == 'lnum' and (fun.name == 'vim.fn.getline' or fun.doc:find("{lnum} is used")) then
+      ret = ret .. "--- @param lnum number|string\n"
+    else
+      ret = ret .. M.param(param)
+    end
     table.insert(params, param.name)
   end
   for _, r in pairs(fun["return"]) do
