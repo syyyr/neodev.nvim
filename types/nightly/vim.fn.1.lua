@@ -117,7 +117,7 @@ function vim.fn.msgpackparse(data) end
 -- ```vim
 --   GetLnum()->nextnonblank()
 -- ```
---- @param lnum number
+--- @param lnum number|string
 --- @return number
 function vim.fn.nextnonblank(lnum) end
 
@@ -243,7 +243,7 @@ function vim.fn.pow(x, y) end
 -- ```vim
 --   GetLnum()->prevnonblank()
 -- ```
---- @param lnum number
+--- @param lnum number|string
 --- @return number
 function vim.fn.prevnonblank(lnum) end
 
@@ -1614,7 +1614,7 @@ function vim.fn.serverstop(address) end
 --   GetText()->setbufline(buf, lnum)
 -- ```
 --- @param buf buffer
---- @param lnum number
+--- @param lnum number|string
 --- @param text string
 --- @return number
 function vim.fn.setbufline(buf, lnum, text) end
@@ -1859,7 +1859,7 @@ function vim.fn.setfperm(fname, mode) end
 -- ```vim
 --   GetText()->setline(lnum)
 -- ```
---- @param lnum number
+--- @param lnum number|string
 --- @param text string
 --- @return number
 function vim.fn.setline(lnum, text) end
@@ -3356,7 +3356,7 @@ function vim.fn.swapname(buf) end
 -- ```vim
 --   :echo synIDattr(synID(line("."), col("."), 1), "name")
 -- ```
---- @param lnum number
+--- @param lnum number|string
 --- @param col number
 --- @return number
 function vim.fn.synID(lnum, col, trans) end
@@ -3447,7 +3447,7 @@ function vim.fn.synIDtrans(synID) end
 --   synconcealed(lnum, 4)   [1, 'X', 2]
 --   synconcealed(lnum, 5)   [1, 'X', 2]
 --   synconcealed(lnum, 6)   [0, '', 0]
---- @param lnum number
+--- @param lnum number|string
 --- @param col number
 --- @return any[]
 function vim.fn.synconcealed(lnum, col) end

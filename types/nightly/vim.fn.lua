@@ -101,7 +101,7 @@ function vim.fn.api_info() end
 -- ```
 -- Can also be used as a |method| after a List: >
 --   mylist->append(lnum)
---- @param lnum number
+--- @param lnum number|string
 --- @param text string
 --- @return number
 function vim.fn.append(lnum, text) end
@@ -811,7 +811,7 @@ function vim.fn.chdir(dir) end
 -- ```vim
 --   GetLnum()->cindent()
 -- ```
---- @param lnum number
+--- @param lnum number|string
 --- @return number
 function vim.fn.cindent(lnum) end
 
@@ -1375,7 +1375,7 @@ function vim.fn.did_filetype() end
 -- ```vim
 --   GetLnum()->diff_filler()
 -- ```
---- @param lnum number
+--- @param lnum number|string
 --- @return number
 function vim.fn.diff_filler(lnum) end
 
@@ -1393,7 +1393,7 @@ function vim.fn.diff_filler(lnum) end
 -- ```vim
 --   GetLnum()->diff_hlID(col)
 -- ```
---- @param lnum number
+--- @param lnum number|string
 --- @param col number
 --- @return number
 function vim.fn.diff_hlID(lnum, col) end
@@ -2301,7 +2301,7 @@ function vim.fn.fnamemodify(fname, mods) end
 -- ```vim
 --   GetLnum()->foldclosed()
 -- ```
---- @param lnum number
+--- @param lnum number|string
 --- @return number
 function vim.fn.foldclosed(lnum) end
 
@@ -2315,7 +2315,7 @@ function vim.fn.foldclosed(lnum) end
 -- ```vim
 --   GetLnum()->foldclosedend()
 -- ```
---- @param lnum number
+--- @param lnum number|string
 --- @return number
 function vim.fn.foldclosedend(lnum) end
 
@@ -2334,7 +2334,7 @@ function vim.fn.foldclosedend(lnum) end
 -- ```vim
 --   GetLnum()->foldlevel()
 -- ```
---- @param lnum number
+--- @param lnum number|string
 --- @return number
 function vim.fn.foldlevel(lnum) end
 
@@ -2370,7 +2370,7 @@ function vim.fn.foldtext() end
 -- ```vim
 --   GetLnum()->foldtextresult()
 -- ```
---- @param lnum number
+--- @param lnum number|string
 --- @return string
 function vim.fn.foldtextresult(lnum) end
 
@@ -3231,7 +3231,7 @@ function vim.fn.getjumplist(winnr, tabnr) end
 -- 
 -- <    To get lines from another buffer see |getbufline()| and
 -- |getbufoneline()|
---- @param lnum number
+--- @param lnum number|string
 --- @param end_? number
 --- @return any[]
 function vim.fn.getline(lnum, end_) end
@@ -4272,7 +4272,7 @@ function vim.fn.id(expr) end
 -- ```vim
 --     GetLnum()->indent()
 -- ```
---- @param lnum number
+--- @param lnum number|string
 --- @return number
 function vim.fn.indent(lnum) end
 
@@ -4982,7 +4982,7 @@ function vim.fn.line(expr, winid) end
 -- ```vim
 --   GetLnum()->line2byte()
 -- ```
---- @param lnum number
+--- @param lnum number|string
 --- @return number
 function vim.fn.line2byte(lnum) end
 
@@ -4996,7 +4996,7 @@ function vim.fn.line2byte(lnum) end
 -- ```vim
 --   GetLnum()->lispindent()
 -- ```
---- @param lnum number
+--- @param lnum number|string
 --- @return number
 function vim.fn.lispindent(lnum) end
 
